@@ -1,9 +1,9 @@
 # CDD FED Guidelines
 
 
-## Guidelines for Front-End Development
+### Guidelines for Front-End Development
 
-### Document is under construction!
+#### Document is under construction!
 
 
 The goal of the following document is to deal with our approach to writing managable and maintainable code in a unified way. It will cover syntax, formatting and anatomy, but also aims to align the mindframe and approach to writing and collaborating on code.
@@ -27,7 +27,7 @@ The following document is based on years of trial and errors, but also a collect
 
 
 ## Contents
------------
+
 
 * General Overview
 	* SASS
@@ -45,7 +45,6 @@ The following document is based on years of trial and errors, but also a collect
 	
 
 ## General Overview
------------
 
 ### SASS
 
@@ -63,19 +62,20 @@ Here's an example of a module, and three variants of the module (for different t
 
 
 ```
-.meal {}
-
-.meal--breakfast {}
-.meal--lunch {}
-.meal--dinner {}
+	.meal {}
+	
+	.meal--breakfast {}
+	.meal--lunch {}
+	.meal--dinner {}
 ```
+
 Here is an example of one of these, and it's sub-modules
 
 ```
-.meal--breakfast {}
-
-.meal--breakfast__toast {}
-.meal--breakfast__marmelade {}
+	.meal--breakfast {}
+	
+	.meal--breakfast__toast {}
+	.meal--breakfast__marmelade {}
 ```
 
 ##### When to make a module?
@@ -109,25 +109,25 @@ The markup is for a single news item on the front-page. As you can see, it conta
 
 
 ```
-`<div class="item">
-    <div class="item__container">
-        <a href="http://" class="item__link">
-            <div class="item__media-wrapper">
-                <div class="item__image-container">
-                    <img src="013.jpg"alt=""/>
-                </div>
-                <h2 class="item__title">
-                    Will Self: my energy-drink addiction
-                </h2>
-            </div>
-        </a>
-        <div class="item__meta">
-            <time class="item__timestamp" datetime="2014-06-15T19:55:00+0000">
-                <span class="timestamp__text" title="Published: 15 Jun 2014">14h</span>
-            </time>
-        </div>
-    </div>
-</div>`
+	<div class="item">
+	    <div class="item__container">
+	        <a href="http://" class="item__link">
+	            <div class="item__media-wrapper">
+	                <div class="item__image-container">
+	                    <img src="013.jpg"alt=""/>
+	                </div>
+	                <h2 class="item__title">
+	                    Will Self: my energy-drink addiction
+	                </h2>
+	            </div>
+	        </a>
+	        <div class="item__meta">
+	            <time class="item__timestamp" datetime="2014-06-15T19:55:00+0000">
+	                <span class="timestamp__text" title="Published: 15 Jun 2014">14h</span>
+	            </time>
+	        </div>
+	    </div>
+	</div>
 
 ```
 The benefits of this approach becomes quite clear. Any developer dropped into this project would immediately see what the below code is for, and how each component works together, without having to read through any project documentation first. 
@@ -143,7 +143,7 @@ There are a lot of websites out there that have adopted this (or a variation of 
 
 
 ## The Workflow
------------
+
 
 The Front-End workflow for a new build can be summarised like this:
 
@@ -164,7 +164,7 @@ The Front-End workflow for a new build can be summarised like this:
 
 
 ## Yeoman generator
------------
+
 
 The [CDD Yeoman generator] (Currently under construction) is designed to be a quick starting point for any new build. It’s goal is to ensure a consistent toolset is used across all our projects, and to include best practices from the outset using a combination of Yeoman, Bower, Grunt and grunt-tasks such as Autoprefixer, jslint, cssmin etc to make your life as easy as possible.
 
@@ -191,7 +191,7 @@ The generated grunt script, when started, will do the following:
 
 
 ## Building Components
------------
+
 
 When building modular components you always write the markup first, before writing any CSS.
 
@@ -206,15 +206,15 @@ The default breakpoints are purposely named not to refer to any device or screen
 Example:
 
 ```
-  .cell {
-    
-    display: block;
-    width: 100%;
-
-    @include breakpoint(teen-bear) { 
-    	display: inline-block;
-    	width: 50%;
-    }
+	.cell {
+	
+		display: block;
+		width: 100%;
+		
+		@include breakpoint(teen-bear) { 
+		    display: inline-block;
+		    width: 50%;
+	}
 ```
 
 Keep doing this until you reach the maximum size.
@@ -235,7 +235,7 @@ font-size:62.5%
 
 
 ## Pattern Library
------------
+
 
 In most cases, you will be creating a pattern library with your modules.
 
@@ -262,6 +262,14 @@ I’ve attached a picture i took of an excellent article from the newest net mag
 
 We're using [pattern lab] for our implementation.  
 
+***
+
+---
+
+- - - -
+
+***
+
 ####References:
 
 This is an example of a beautiful pattern library, made my Mailchimp, for their site: [http://ux.mailchimp.com/patterns/]
@@ -277,17 +285,24 @@ Entertainment Weekly build process using patternlab.io: [http://bradfrostweb.com
 
 	
 ## static site build
------------
+
+***
+
+---
+
+- - - -
+
+***
+
 ## Do's and Don't's
------------
 
+***
 
+---
 
+- - - -
 
-
-
-
-
+***
 
 ### Don't do it!
 -----------
@@ -309,11 +324,6 @@ Use variables instead of colours and things that might change.
 - - - -
 
 ***
-
----
-
-- - - -
-
 
 
 
