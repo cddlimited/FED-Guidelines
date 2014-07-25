@@ -23,7 +23,7 @@ The following document is based on years of trial and errors, but also a collect
 
 ## Version
 
-0.1
+0.2
 
 
 ## Contents
@@ -33,6 +33,7 @@ The following document is based on years of trial and errors, but also a collect
 	* SASS
 	* OOCSS		 
 	* Naming Conventions
+* The SnappingNecss Architecture
 * The Workflow
 * Yeoman generator
 	* The base kit
@@ -100,6 +101,8 @@ Our approach is [csswizandry's take on the BEM syntax]. I suggest reading this a
 * module-name--variant
 * module-name__component
 
+We encourage combination of variants. For example, you might want to combine the effects of two variants, add module--a and module--b, instead of creating module--ab as a variant.
+
 #####A real-life example:
 
 This is taken from the new [guardian.com responsive website]
@@ -138,6 +141,20 @@ There are a lot of websites out there that have adopted this (or a variation of 
 
 * http://www.firstborn.com/
 * https://github.com/guardian/frontend/tree/master/common/app/assets/stylesheets
+
+
+## The Snappingnecss<sup><sup>1</sup></sup> Architecture
+
+
+<sup><sup>1</sup>: Working title</sup>
+
+### Folder structure
+
+* core - Contains a base set of partials that will be part of every project. These include the grid system, normalise, layout and helper classes/functions
+* Foundation - This lays on top of core, adding project specific modifiers and config files containing project-wide variables.
+* modules - This holds the projects modules. These are independent and reusable chunks of code that can be reused throughout the project and other projects.
+* vendor - External libraries
+
 
 
 

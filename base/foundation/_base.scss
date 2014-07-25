@@ -1,0 +1,64 @@
+
+
+// *************************************
+//
+//   Base
+//   -> Base-level tags (body, p, etc.)
+//
+// *************************************
+
+
+*, *:after, *:before  {
+  box-sizing:border-box;
+  font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  outline:none;
+}
+
+html {
+  font-size: 62.5%; // Equals 10px
+  height: 100%;
+}
+
+body {
+  
+  @include font-family("thin");
+
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  line-height: 1.618;
+
+
+}
+
+
+// -------------------------------------
+//   Block Content
+// -------------------------------------
+
+main {
+  overflow: hidden;
+}
+
+ul, li {
+  list-style:none;
+  margin: 0;
+  padding: 0;
+}
+
+figcaption {
+  font-size: 1.3em;
+  text-align: center;
+}
+
+// -------------------------------------
+//   Inline Content
+// -------------------------------------
+
+a {
+  text-decoration:none;
+  color: $red;
+}
+
