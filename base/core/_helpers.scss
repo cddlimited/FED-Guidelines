@@ -1,8 +1,13 @@
 
+
 // *************************************
 //
 //   Helpers
-//   -> Various helper classes
+//   -> Various helper placeholders
+//   -> (Should be extended in modules)
+//
+//   -> NB: This file should grow with
+//   -> each project!
 //
 // *************************************
 
@@ -11,13 +16,11 @@
 //   Image utilities
 // -------------------------------------
 
-.scaleable-img {
-
+%responsive-img {
     max-width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 
@@ -25,7 +28,7 @@
 //   Clearfix
 // -------------------------------------
 
-.clearfix {
+%clearfix {
     &:after{
         content:"";
         display:table;
@@ -33,30 +36,29 @@
     }
 }
 
-
 // -------------------------------------
 //   Add/remove floats
 // -------------------------------------
 
-.float--right   { float:right!important; }
-.float--left    { float:left !important; }
-.float--none    { float:none !important; }
+%float--right   { float:right; }
+%float--left    { float:left ; }
+%float--none    { float:none ; }
 
 
 // -------------------------------------
 //   Text alignment
 // ------------------------------------
 
-.text--left     { text-align:left  !important; }
-.text--center   { text-align:center!important; }
-.text--right    { text-align:right !important; }
+%text--left     { text-align:left  ; }
+%text--center   { text-align:center; }
+%text--right    { text-align:right ; }
 
 
 // -------------------------------------
 //   Font weights
 // -------------------------------------
 
-.weight--light      { font-weight:300!important; }
-.weight--normal     { font-weight:400!important; }
-.weight--semibold   { font-weight:600!important; }
+%weight--light      { font-weight:300; }
+%weight--normal     { font-weight:400; }
+%weight--semibold   { font-weight:600; }
 

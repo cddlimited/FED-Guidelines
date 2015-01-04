@@ -1,46 +1,50 @@
+@import 
 
 // *************************************
 //
-//   CDD stylesheet for (projectName)
+//   SCSS Stylesheet for (projectName)
 //
 // *************************************
 
-// -------------------------------------
-//   CORE
-// -------------------------------------
-
-@import "core/_utilities";
-@import "core/_helpers";
-@import "core/_normalise";
-@import "core/_grid";
-@import "core/_print";
 
 // -------------------------------------
-//   Foundation
+//   CORE // Should not be modified
 // -------------------------------------
 
-// ----- Mixins ----- //
+'core/_helpers',
+'core/_normalise',
+'core/_grid',
+'core/_print',
 
-@import "foundation/_typography";
-@import "foundation/_breakpoints";
+// -------------------------------------
+//   MIXINS
+// -------------------------------------
 
-@import "foundation/_config";
-@import "foundation/_base";
+'mixins/_utilities',
+'mixins/_typography',
+'mixins/_breakpoints',
+
+// -------------------------------------
+//   FOUNDATION
+// -------------------------------------
+
+'foundation/_config',
+'foundation/_base',
 
 // -------------------------------------
 //   MODULES
 // -------------------------------------
 
-@import "modules/_module";
+'modules/_module',
 
 // -------------------------------------
 //   VENDOR
 // -------------------------------------
 
-@import "vendor/_external";
+'vendor/_external',
 
 // -------------------------------------
-//   Inbox
+//   INBOX
 // -------------------------------------
 
-@import "_inbox";
+'_inbox';
