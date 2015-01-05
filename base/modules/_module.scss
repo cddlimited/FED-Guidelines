@@ -1,9 +1,11 @@
 
+
 // *************************************
 //
 //   Overview of module and usage
 //
 // *************************************
+
 
 // -------------------------------------
 //   Variables
@@ -18,12 +20,7 @@ $some-color: #c0deed;
 //   Base
 // -------------------------------------
 
-%m-module {}
-
-
-.m-module {
-
-    @extend %m-module;
+.module {
 
 
     // -------------------------------------
@@ -43,6 +40,6 @@ $some-color: #c0deed;
 
     // ----- Variation description ----- // 
 
-    &--variation {}
+    & -variation {}
 
 }

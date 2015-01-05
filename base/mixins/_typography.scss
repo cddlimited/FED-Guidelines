@@ -19,31 +19,25 @@
   line-height: $line + rem;
 }
 
-// ----- Half line-height version ----- // 
-
-@mixin font-size-limit-lh($size: 1.6, $line: $size * 1) {
-  font-size: ($size * 10) + px;
-  line-height: ($line * 10) + px;
-  font-size: $size + rem;
-  line-height: $line + rem;
-}
-
-
 // -------------------------------------
 //   Font family helper
 // -------------------------------------
 
 @mixin font-family($family: "default") {
   @if $family == "default" {
-    font-family: 'open_sanslight';
-  }  
-  @if $family == "thin" {
-    font-family: 'pill_gothic_condthin';
+    font-family: 'PT Sans';
+    font-weight: 400;
+  }
+  @if $family == "italic" {
+    font-family: 'PT Sans';
+    font-weight: '400italic';
   }  
   @if $family == "bold" {
-    font-family: 'pill_gothic_condbold';
-  }  
-  @if $family == "georgia" {
-    font-family: 'Georgia, serif';
+    font-family: 'Lato';
+    font-weight: 700; 
   }
+  @if $family == "bolder" {
+    font-family: 'Lato';
+    font-weight: 900; 
+  }  
 }

@@ -15,10 +15,9 @@
 
 // ----- Base Colors ----- //
 
-$red: #C9243F;
-$blue: #09C;
-$gray: #666;
-$charcoal: #282828;
+$sitecol-1: #C9243F;
+$sitecol-2: #09C;
+$sitecol-3: #666;
 // ...
 
 // General Colors
@@ -31,16 +30,6 @@ $lightgrey: lighten($black, 75%);
 $lightergrey: lighten($black, 90%);
 $white: rgb(255,255,255);
 
-
-// Site Themes
-
-$body-colour-day: #edeff1;
-$text-colour-day: $darkergrey;
-$body-colour-night: $charcoal;
-$text-colour-night: $white;
-
-
 // ----- Typography ----- //
-
-$text-transform: uppercase;
-$letter-spacing: 0.1em;
+$site-text-transform: uppercase;
+$site-letter-spacing: 0.1em;
