@@ -121,10 +121,14 @@ $use-markup-fix:        true !default;
  * that the breakpoint fires at.
  */
 $breakpoints: (
+    'infant' '(min-width: 20em)',
+    'baby' '(min-width: 30em)',
     'child' '(min-width: 37.5em)',
     'teen' '(min-width: 48em)',
     'adult' '(min-width: 64em)',
-    'mama' '(min-width: 68.75em)'
+    'mama' '(min-width: 68.75em)',
+    'papa' '(min-width: 81.25em)',
+    'elder' '(min-width: 120em)'
 ) !default;
 
 
@@ -138,9 +142,9 @@ $breakpoints: (
  * Push and pull shall only be used if `$push` and/or `$pull` and `$responsive`
  * have been set to ‘true’.
  */
-$breakpoint-has-widths: ('child', 'teen', 'adult', 'mama') !default;
-$breakpoint-has-push:   ('child', 'teen', 'adult', 'mama') !default;
-$breakpoint-has-pull:   ('child', 'teen', 'adult', 'mama') !default;
+$breakpoint-has-widths: ('infant', 'baby', 'child', 'teen', 'adult', 'mama', 'papa', 'elder') !default;
+$breakpoint-has-push:   ('infant', 'baby', 'child', 'teen', 'adult', 'mama', 'papa', 'elder') !default;
+$breakpoint-has-pull:   ('infant', 'baby', 'child', 'teen', 'adult', 'mama', 'papa', 'elder') !default;
 
 
 /**
