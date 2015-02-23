@@ -1,3 +1,5 @@
+// CSSWizandry grids
+
 /*------------------------------------*\
     $CSSWIZARDRY-GRIDS
 \*------------------------------------*/
@@ -120,6 +122,7 @@ $use-markup-fix:        true !default;
  * your classes (e.g. `.child--one-half`), the second value is the media query
  * that the breakpoint fires at.
  */
+
 $breakpoints: (
     'infant' '(min-width: 20em)',
     'baby' '(min-width: 30em)',

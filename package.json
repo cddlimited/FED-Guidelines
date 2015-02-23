@@ -1,0 +1,24 @@
+{
+  "name": "FED-Guidelines",
+  "version": "0.0.8",
+  "description": "Front-end guidelines and base kit",
+  "main": "README.md",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bnhovde/FED-Guidelines.git"
+  },
+  "author": "CDD LTD",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bnhovde/FED-Guidelines/issues"
+  },
+  "homepage": "https://github.com/bnhovde/FED-Guidelines",
+  "frontend": {
+    "name": "FED-Guidelines",
+    "stylesheets": "styles",
+    "javascripts": "scripts"
+  }
+}
