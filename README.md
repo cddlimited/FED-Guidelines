@@ -155,7 +155,42 @@ There are a lot of websites out there that have adopted this (or a variation of 
 * modules - This holds the projects modules. These are independent and reusable chunks of code that can be reused throughout the project and other projects.
 * vendor - External libraries
 
+---
 
+### Stylesheets
+
+````
+styles/
+|- application.scss _________________________ # SCSS Imports for (projectName)
+|- _inbox.scss ______________________________ # Inbox (shame file)
+styles\vendor/
+|- _external.scss ___________________________ # External styles
+styles\modules/
+|- _module.scss _____________________________ # Example module
+styles\mixins/
+|- _breakpoints.scss ________________________ # Responsive breakpoints.
+|- _typography.scss _________________________ # Typography mixins
+|- _utilities.scss __________________________ # General helper mixins
+styles\foundation/
+|- _attributes.scss _________________________ # Global Attribute Modifiers
+|- _base.scss _______________________________ # Base-level tags
+|- _config.scss _____________________________ # Global Settings
+styles\core/
+|- _grid.scss _______________________________ # CSSWizandry grids
+|- _helpers.scss ____________________________ # Helpers (placeholders)
+|- _normalise.scss __________________________ # normalize.css v3.0.0 | MIT License | git.io/normalize
+|- _print.scss ______________________________ # Print media styles
+````
+
+### Javascripts
+
+````
+scripts/
+|- main.js __________________________________ # Script loader
+|- moduleA.js _______________________________ # Module A (example)
+|- moduleB.js _______________________________ # Module B (example)
+|- myApp.js _________________________________ # Main Application
+````
 
 
 
