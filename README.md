@@ -3,9 +3,6 @@
 
 ### Guidelines for Front-End Development
 
-#### Document is under construction!
-
-
 The goal of the following document is to deal with our approach to writing managable and maintainable code in a unified way. It will cover syntax, formatting and anatomy, but also aims to align the mindframe and approach to writing and collaborating on code.
 
 Key goals:
@@ -15,7 +12,6 @@ Key goals:
   - Stylesheets must be scalable for future development
 
 The following document is based on years of trial and errors, but also a collection of best practies and patterns inspired by [OOCSS], [SMACSS], [BEM], [MVCSS] and [inuitCSS]. [Harry Roberts CSS Guidelines] has also been a great help. Credits where credits due.
-
 
 > Separate structure from skin, and create reusable modules 
 
@@ -33,7 +29,8 @@ The following document is based on years of trial and errors, but also a collect
 	* SASS
 	* OOCSS		 
 	* Naming Conventions
-* The SnappingNecss Architecture
+* Style guide
+* The SASS base kit
 * The Workflow
 * Yeoman generator
 	* The base kit
@@ -143,12 +140,14 @@ There are a lot of websites out there that have adopted this (or a variation of 
 * https://github.com/guardian/frontend/tree/master/common/app/assets/stylesheets
 
 
-## The Snappingnecss<sup><sup>1</sup></sup> Architecture
+## Style Guide
+
+It's important that everyone's coding and writing style is consistent. I suggest using the [css guidelin.es](http://cssguidelin.es/) as a refrence. This contains detailed descriptions for writing maintaninable css for collaborative environments.
 
 
-<sup><sup>1</sup>: Working title</sup>
+## The SASS base kit
 
-### Folder structure
+Our in-house SASS base kit should be used as a base for all projects. It's been developed through a lot of iterations, currently structured like this:
 
 * core - Contains a base set of partials that will be part of every project. These include the grid system, normalise, layout and helper classes/functions
 * Foundation - This lays on top of core, adding project specific modifiers and config files containing project-wide variables.
@@ -193,14 +192,13 @@ scripts/
 ````
 
 
-
 ## The Workflow
 
 
 The Front-End workflow for a new build can be summarised like this:
 
 * planning and project setup
-* building the pattern library
+* building the pattern library (NOT YET IMPLEMENTED)
 	* building of modules
 		* writing of the module markup
 		* writing of the module CSS
@@ -218,14 +216,14 @@ The Front-End workflow for a new build can be summarised like this:
 ## Yeoman generator
 
 
-The [CDD Yeoman generator] (Currently under construction) is designed to be a quick starting point for any new build. It’s goal is to ensure a consistent toolset is used across all our projects, and to include best practices from the outset using a combination of Yeoman, Bower, Grunt and grunt-tasks such as Autoprefixer, jslint, cssmin etc to make your life as easy as possible.
+The [Yeoman generator] (Currently under construction) is designed to be a quick starting point for any new build. It’s goal is to ensure a consistent toolset is used across all our projects, and to include best practices from the outset using a combination of Yeoman, Bower, Gulp and grunt-tasks such as Autoprefixer, jslint, cssmin etc to make your life as easy as possible.
 
 When ran, the generator will ask you a series of questions and scaffold a project depending on your requirements.
 
-Below is a quick introduction and documentation of the generator, it’s contents and how to use it.
+See the generator readme for installation info.
 
 
-### The base kit
+### Starting a new project with the generator
 
 * Sass
 * Bower
@@ -286,7 +284,7 @@ font-size:62.5%
 
 
 
-## Pattern Library
+## Pattern Library (NOT YET IMPLEMENTED)
 
 
 In most cases, you will be creating a pattern library with your modules.
@@ -310,17 +308,6 @@ The workflow win is just one of several gains:
 
 I’ve attached a picture i took of an excellent article from the newest net magazine at the bottom of this doc. I recommend the read, it’s where most of this write-up comes from.
 
-####Getting started
-
-We're using [pattern lab] for our implementation.  
-
-***
-
----
-
-- - - -
-
-***
 
 ####References:
 
@@ -334,17 +321,6 @@ A list apart article on pattern libraries: [http://alistapart.com/blog/post/gett
 
 Entertainment Weekly build process using patternlab.io: [http://bradfrostweb.com/blog/post/entertainment-weekly/]
 
-
-	
-## static site build
-
-***
-
----
-
-- - - -
-
-***
 
 ## Do's and Don't's
 
@@ -362,9 +338,7 @@ Entertainment Weekly build process using patternlab.io: [http://bradfrostweb.com
 * Don't let ID's anywhere near your CSS. This will come back to bite you (or someone else)
 * Avoid nested SASS unless it makes sense, and never more than 3-4 levels. Unless it actually needs to be nested, don't. Your css output will have long selectors that will be hard to override down the line.
 Use variables instead of colours and things that might change.
-
 * Instead of 'color: blue', use 'color: $primary', and define primary in your variables partial. If the colour changes, no need to find-replace. Same goes for things like test-transform, font sizes and any global attributes.
-
 * Avoid heights on anything but assets like images and videos. It’s a good idea to let the content control the height of it’s container. You'll thank yourself when the content changes and the design doesn't break. An example would be a navigation bar. Let the line-height of the `<a>` tags push the container and surrounding `<li>` up and down. If you have to specify height, in most cases you could probably use line-height.
 
 
