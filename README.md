@@ -216,7 +216,7 @@ The Front-End workflow for a new build can be summarised like this:
 ## Yeoman generator
 
 
-The [Yeoman generator] (Currently under construction) is designed to be a quick starting point for any new build. It’s goal is to ensure a consistent toolset is used across all our projects, and to include best practices from the outset using a combination of Yeoman, Bower, Gulp and grunt-tasks such as Autoprefixer, jslint, cssmin etc to make your life as easy as possible.
+The [Yeoman generator](https://github.com/cddlimited/FED-Guidelines) is designed to be a quick starting point for any new build. It’s goal is to ensure a consistent toolset is used across all our projects, and to include best practices from the outset using a combination of Yeoman, Bower, Gulp and grunt-tasks such as Autoprefixer, jslint, cssmin etc to make your life as easy as possible.
 
 When ran, the generator will ask you a series of questions and scaffold a project depending on your requirements.
 
@@ -225,18 +225,9 @@ See the generator readme for installation info.
 
 ### Starting a new project with the generator
 
-* Sass
-* Bower
-* Grunt
+After you have ran the generator, use [http://www.gridlover.net/](http://www.gridlover.net/) to create your vertical rythm and font sizes. If there is a PSD I use this to first pick the base font size, then just tweak the scale factor until you are as close as you can get to the PSD.
 
-These three tools combined takes away a lot of the pains of FED and automates the things you don’t want to worry about.
-
-The generated grunt script, when started, will do the following:
-
-- watch and compile your Sass
-- watch, jsLint and compile your Js
-- Autoprefix the generated CSS. Never write another vendor-prefix!
-- (optional) Open the site with a live reload-enabled server
+Once you are happy, click "styles" and pick "EM" or "REM" and "SCSS", then copy the output into your `_config.scss` partial. BOOM! Your font sizes, line heights and vertical rythm is done.
 
 
 
