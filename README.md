@@ -227,7 +227,9 @@ See the generator readme for installation info.
 
 After you have ran the generator, use [http://www.gridlover.net/](http://www.gridlover.net/) to create your vertical rythm and font sizes. If there is a PSD I use this to first pick the base font size, then just tweak the scale factor until you are as close as you can get to the PSD.
 
-Once you are happy, click "styles" and pick "EM" or "REM" and "SCSS", then copy the output into your `_config.scss` partial. BOOM! Your font sizes, line heights and vertical rythm is done.
+Once you are happy, click "styles" and pick "REM" and "SCSS", then copy the output into your `_config.scss` partial. (You need to then go back to gridlover and switch to "PX", then copy the first two values, body size and line height and override these lines with this. This is because the root element in the DOM needs to have a px font value) BOOM! Your font sizes, line heights and vertical rythm is done.
+
+PS: Finally, you will have to update the Gulpfile.js's "pixrem" task to the right body font size, so that older browsers get the right fallback size.
 
 
 
